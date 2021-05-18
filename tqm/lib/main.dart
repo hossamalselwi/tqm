@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:tqm/views/stratige/_periodic_reading.dart';
 import 'managers/screenManager.dart';
 import 'shared_widgets/theme/darkTheme.dart';
 import 'shared_widgets/theme/lightTheme.dart';
@@ -27,6 +28,7 @@ main() async {
   //runApp(MyApp());
 }
 
+/*
 class MyApp extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -67,6 +69,35 @@ class MyApp extends StatelessWidget {
             );
           }),
     );
+  }
+}
+*/
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        debugShowMaterialGrid: false,
+        title: 'Test',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          //accentColor: Colors.amberAccent,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: getRoot(PeriodicReadingPage(), context));
+    //getRoot(LoginPage(), context);
+  }
+
+  static Widget getRoot(Widget widget, BuildContext context) {
+    return Directionality(
+        textDirection: TextDirection.rtl,
+        child: GestureDetector(
+            onTap: () {
+              FocusScope.of(context).requestFocus(new FocusNode());
+            },
+            child: widget));
   }
 }
 

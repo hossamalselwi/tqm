@@ -43,6 +43,8 @@ class PointerModel {
   UnitsModel unit;
   List<ExecuteDeptModel> executeDept = List<ExecuteDeptModel>();
 
+  List<MeasurementCycle> mCycle=[];
+
   PointerModel({
     this.id,
     this.name,
@@ -55,6 +57,8 @@ class PointerModel {
     this.idUnitName,
     this.isNegitive,
     this.unit,
+    this.executeDept,
+    this.mCycle
   });
 
   factory PointerModel.fromJson(Map<String, dynamic> json) {

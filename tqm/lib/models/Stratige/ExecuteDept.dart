@@ -8,7 +8,7 @@ class ExecuteDeptModel {
 
   String nameDept;
 
-  ExecuteDeptModel({this.id, this.idPointer, this.idDeptName, this.nameDept});
+  ExecuteDeptModel({this.id, this.idPointer, this.idDeptName, this.nameDept,this.overload});
 
   factory ExecuteDeptModel.fromJson(Map<String, dynamic> json) {
     return ExecuteDeptModel(

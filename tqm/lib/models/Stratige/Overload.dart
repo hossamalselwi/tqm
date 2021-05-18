@@ -17,6 +17,7 @@ class OverloadModel {
       this.idBrch,
       this.nameBrch,
       this.measurCycleMounthModel,
+        this.branchMCycle,
       this.finishMCycle = false});
 
   List<MeasurCycleMounthModel> measurCycleMounthModel =
@@ -43,6 +44,7 @@ class MCycleTarget {
   String id;
   MeasurementCycle measurementCycle;
   int cycleTarget = 0;
+  int cTargetActual = 0;
 
   MCycleTarget(this.id, this.measurementCycle, this.cycleTarget);
 
